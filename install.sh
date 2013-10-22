@@ -3,6 +3,9 @@
 RULES="/etc/udev/rules.d/51-android.rules"
 export DEBIAN_FRONTEND=noninteractive
 
+# expect root
+[ "$(whoami)" != "root" ] && echo "error: need to be root" && exit 1
+
 # install add-apt-repository
 apt-get -y update
 apt-get -y install python-software-properties debconf-utils
