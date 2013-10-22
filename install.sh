@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 RULES="/etc/udev/rules.d/51-android.rules"
 export DEBIAN_FRONTEND=noninteractive
