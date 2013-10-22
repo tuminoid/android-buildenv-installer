@@ -23,9 +23,9 @@ ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
 
 # install java 6 and 7, 6 preferred right now, but aosp needs 7 later
 echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
-apt-get -y install oracle-java7-installer
+apt-get -y --force-yes install oracle-java7-installer
 echo "oracle-java6-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
-apt-get -y install oracle-java6-installer
+apt-get -y --force-yes install oracle-java6-installer
 update-java-alternatives -s java-6-oracle
 
 # install udev rules
