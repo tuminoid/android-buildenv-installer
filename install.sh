@@ -9,7 +9,7 @@ export DEBIAN_FRONTEND=noninteractive
 # install add-apt-repository
 apt-get -y update
 apt-get -y install python-software-properties debconf-utils
-add-apt-repository ppa:webupd8team/java
+add-apt-repository -y ppa:webupd8team/java
 apt-get -y update
 
 # install stuff
