@@ -16,9 +16,10 @@ apt-get -y update
 apt-get -y install git gnupg flex bison gperf build-essential \
   zip curl libc6-dev linux-libc-dev libncurses5-dev:i386 x11proto-core-dev \
   libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
-  libgl1-mesa-dev g++-multilib mingw32 tofrodos \
-  python-markdown libxml2-utils xsltproc zlib1g-dev:i386 || apt-get -y -f install
-ln -fs /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+  libgl1-mesa-dev mingw32 tofrodos \
+  python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+ln -sf /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+apt-get -y install g++-multilib
 
 # install java 6 and 7, 6 preferred right now, but aosp needs 7 later
 echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
